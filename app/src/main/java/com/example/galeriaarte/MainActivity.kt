@@ -42,13 +42,14 @@ class MainActivity : ComponentActivity() {
 data class PecaDeArte(
     @DrawableRes val imageRes: Int,
     @StringRes val titulo: Int,
-    @StringRes val artista: Int
+    @StringRes val artista: Int,
+    @StringRes val descricao: Int
 )
 
 val pecasDeArte = listOf(
-    PecaDeArte(R.drawable.ponterionitero, R.string.tituloPonte, R.string.autorPonte),
-    PecaDeArte(R.drawable.espelho, R.string.tituloEspelho, R.string.autorEspelho),
-    PecaDeArte(R.drawable.mintefuji, R.string.tituloFuji, R.string.autorFuji)
+    PecaDeArte(R.drawable.ponterionitero, R.string.tituloPonte, R.string.autorPonte, R.string.descricaoPonte),
+    PecaDeArte(R.drawable.espelho, R.string.tituloEspelho, R.string.autorEspelho, R.string.descricaoEspelho),
+    PecaDeArte(R.drawable.mintefuji, R.string.tituloFuji, R.string.autorFuji, R.string.descricaoFuji)
 )
 
 @Composable
@@ -81,7 +82,7 @@ fun GaleriaLayout(modifier: Modifier = Modifier) {
                 modifier = modifier
                     .fillMaxSize(),
                 painter = painterResource(pecaArte.imageRes),
-                contentDescription = null
+                contentDescription = stringResource(pecaArte.descricao)
             )
         }
 

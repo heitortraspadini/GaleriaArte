@@ -6,4 +6,7 @@
     <string name="autorEspelho">Jesus Cristo</string>
     <string name="tituloFuji">Monte Fuji</string>
     <string name="autorFuji">J.C.</string>
+    <string name="descricaoPonte">Imagem da ponte Rio Niterói, Rio de Janeiro</string>
+    <string name="descricaoEspelho">Imagem do Salar de Uyuni, Chile</string>
+    <string name="descricaoFuji">Imagem do Monte Fuji, Japão</string>
 </resources>
