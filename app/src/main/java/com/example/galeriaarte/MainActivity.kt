@@ -41,8 +41,8 @@ class MainActivity : ComponentActivity() {
 
 data class PecaDeArte(
     @DrawableRes val imageRes: Int,
-    @StringRes val title: Int,
-    @StringRes val artist: Int
+    @StringRes val titulo: Int,
+    @StringRes val artista: Int
 )
 
 val pecasDeArte = listOf(
@@ -55,7 +55,7 @@ val pecasDeArte = listOf(
 fun GaleriaLayout(modifier: Modifier = Modifier) {
     var etapaAtual by remember { mutableIntStateOf(0) }
 
-    val artPiece = pecasDeArte[etapaAtual] // Obter a peça de arte com base na etapa atual
+    val pecaArte = pecasDeArte[etapaAtual] // Obter a peça de arte com base na etapa atual
 
     Column(
         modifier = modifier
@@ -80,7 +80,7 @@ fun GaleriaLayout(modifier: Modifier = Modifier) {
             Image(
                 modifier = modifier
                     .fillMaxSize(),
-                painter = painterResource(artPiece.imageRes),
+                painter = painterResource(pecaArte.imageRes),
                 contentDescription = null
             )
         }
@@ -93,8 +93,8 @@ fun GaleriaLayout(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text(text = stringResource(artPiece.title), fontSize = 20.sp)
-            Text(text = stringResource(artPiece.artist), fontSize = 12.sp)
+            Text(text = stringResource(pecaArte.titulo), fontSize = 20.sp)
+            Text(text = stringResource(pecaArte.artista), fontSize = 12.sp)
         }
 
         Spacer(modifier = Modifier.height(20.dp))
