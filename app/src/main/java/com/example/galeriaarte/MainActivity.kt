@@ -48,7 +48,7 @@ data class PecaDeArte(
 val pecasDeArte = listOf(
     PecaDeArte(R.drawable.ponterionitero, R.string.tituloPonte, R.string.autorPonte),
     PecaDeArte(R.drawable.espelho, R.string.tituloEspelho, R.string.autorEspelho),
-    PecaDeArte(R.drawable.mintefuck, R.string.tituloFuji, R.string.autorFuji)
+    PecaDeArte(R.drawable.mintefuji, R.string.tituloFuji, R.string.autorFuji)
 )
 
 @Composable
